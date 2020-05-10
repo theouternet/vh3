@@ -6,8 +6,6 @@ class CreateShares < ActiveRecord::Migration[6.0]
       t.string :drink_id
       t.string :size
       t.integer :price
-      t.integer :abv_per_dollar
-      t.string :special_or_always
       t.string :when_available
       
       t.timestamps
