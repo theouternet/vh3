@@ -1,0 +1,14 @@
+<h1>All Shares</h1>
+
+  <% @shares.each do |share| %>
+   Location: <%= share.location.name %>
+   Zip: <%= share.location.zip %>
+   Drink: <%= share.drink.name %>
+    <%= share.drink.category %>
+    <%= share.drink.sub_category %>
+    <%= share.drink.when_available %> 
+ 
+    #VALUE INDICATOR /$
+    
+    <% end %>
+
