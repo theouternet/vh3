@@ -1,0 +1,17 @@
+#<% if @rating.errors.any? %>...
+
+<%= form_for @share do |f| %>
+
+#@location.name
+#@location.zip
+#@location.menu_link
+
+#@drink.name
+#@drink.type
+#@drink.sub_type
+
+<%= f.select :size, [[Can/Bottle], [Pint Glass], [Shot/Single Mixed Drink], [Double], [Triple], [Wine Glass], [Small Sake], [Large Sake]]
+    <%= f.text_field :price %>
+    <%= f.text_area :when_available %>
+    <%= f.submit %>
+  <% end %>
