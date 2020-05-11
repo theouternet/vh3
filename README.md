@@ -1,5 +1,6 @@
 # README
 
+- RUN 'RAILS SERVER' TO TEST IN BROWSER
 - helper method
 - partial
 - nested resource?
