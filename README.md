@@ -1,5 +1,6 @@
 # README
-test
+
+
 - RUN 'RAILS SERVER' TO TEST IN BROWSER
 - helper method
 - partial
