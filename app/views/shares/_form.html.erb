@@ -1,17 +1,26 @@
-#<% if @rating.errors.any? %>...
 
 <%= form_for @share do |f| %>
 
-#@location.name
-#@location.zip
-#@location.menu_link
+  <%= f.label "Bar" %>
+  <%= f.text_field :location_name %> 
+  <%= f.label "Drink Name" %>
+  <%= f.text_field :drink_name %> 
 
-#@drink.name
-#@drink.type
-#@drink.sub_type
+<%= f.label "Zip" %>
+<%= f.text_field :location_zip %>
 
-<%= f.select :size, [[Can/Bottle], [Pint Glass], [Shot/Single Mixed Drink], [Double], [Triple], [Wine Glass], [Small Sake], [Large Sake]]
-    <%= f.text_field :price %>
-    <%= f.text_area :when_available %>
+
+  <%= f.label "Drink Size" %>
+  <%= f.select :size, options_for_select(["Can or Bottle", "Pint Glass or Tallboy", "Shot or Single Mixed Drink", "Double", "Triple", "Wine Glass", "Small Sake", "Large Sake"]) %>
+  <%= f.label "Price" %>
+  <%= f.text_field :price %>
+  <%= f.label "When Available?" %>
+  <%= f.text_field :when_available %>
+
+
+
+
+
     <%= f.submit %>
+
   <% end %>

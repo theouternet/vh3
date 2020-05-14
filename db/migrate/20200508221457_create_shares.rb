@@ -1,9 +1,9 @@
-class CreateShares < ActiveRecord::Migration[6.0]
+class CreateShares < ActiveRecord::Migration[5.2]
   def change
     create_table :shares do |t|
-      t.string :user_id
-      t.string :location_id
-      t.string :drink_id
+      t.integer :user_id
+      t.integer :location_id
+      t.integer :drink_id
       t.string :size
       t.integer :price
       t.string :when_available

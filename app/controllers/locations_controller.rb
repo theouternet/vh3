@@ -7,7 +7,7 @@ class LocationsController < ApplicationController
     end
   
     def show
-        @location = Location.find_by_id(params[:id])
+        @location = Location.find(params[:id])
     end
   
     def new
@@ -24,23 +24,25 @@ class LocationsController < ApplicationController
         end
   
     def edit
-      @location = Location.find_by(id: params[:location_id])
-      
-      if @location.user_id != current_user.id
-        redirect_to locations_path
-      end
+      @location = Location.find(id: params[:id])
+
     end
   
     def update
+      @location = Location.find(params[:id])
       @location.update(location_params)
   
-    #  redirect_to ..._path(
+      if @location.save
+        redirect_to @location
+      else
+        render :edit
+      end    
     end
   
   private
   
-    #def location_params
-    #  params.require(:location).permit(:
-    #end
+    def location_params
+      params.require(:location).permit(:name, :zip, :menu_link)
+    end
 
 end

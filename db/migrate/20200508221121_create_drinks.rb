@@ -1,4 +1,4 @@
-class CreateDrinks < ActiveRecord::Migration[6.0]
+class CreateDrinks < ActiveRecord::Migration[5.2]
   def change
     create_table :drinks do |t|
       t.string :name

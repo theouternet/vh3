@@ -1,4 +1,4 @@
-class Drink < ApplicationRecord
+class Drink < ActiveRecord::Base
   has_many :shares
 
   has_many :locations, through: :shares
