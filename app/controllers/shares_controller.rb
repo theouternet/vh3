@@ -13,20 +13,18 @@ class SharesController < ApplicationController
     def new
         @share = Share.new
 
-       # @share.build_location
-       # @share.build_drink
-
-
        end
   
-    def create
-        @share = Share.new(share_params)
-        if @share.save
+  
+       def create
+       @share = Share.new(share_params)
+       if @share.save
             redirect_to share_path(@share)
-          else
-            render :new
-          end
+       else 
+          render :new
+       end 
         end
+  
   
     def edit
       @share = Share.find_by(id: params[:share_id])
@@ -45,7 +43,7 @@ class SharesController < ApplicationController
   private
   
     def share_params
-      params.require(:share).permit(:size, :price, :when_available, :location_name, :drink_name, :location_zip, :location_id, :drink_id)
+      params.require(:share).permit(:size, :price, :when_available, :zip, :menu_link, :location_name, :drink_name)
     end
   
 

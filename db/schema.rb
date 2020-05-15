@@ -22,8 +22,6 @@ ActiveRecord::Schema.define(version: 2020_05_08_221457) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
-    t.integer "zip"
-    t.string "menu_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,9 +30,11 @@ ActiveRecord::Schema.define(version: 2020_05_08_221457) do
     t.integer "user_id"
     t.integer "location_id"
     t.integer "drink_id"
+    t.string "zip"
     t.string "size"
     t.integer "price"
     t.string "when_available"
+    t.string "menu_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
