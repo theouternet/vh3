@@ -4,6 +4,9 @@ class Share < ActiveRecord::Base
  belongs_to :drink
  belongs_to :location
 
+ validates :drink, :location, presence: true
+
+
  def location_name=(name)
     self.location = Location.find_or_create_by(name: name)
  end 

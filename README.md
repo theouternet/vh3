@@ -1,13 +1,6 @@
 # README
 
-
 - RUN 'RAILS SERVER' TO TEST IN BROWSER
-- helper method
-- partial
-- nested resource?
-    • You must include a nested new route with form that relates to the parent resource
-
-    • You must include a nested index or show route
 
 - omniauth
 - validations

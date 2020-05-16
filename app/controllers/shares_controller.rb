@@ -3,8 +3,12 @@ class SharesController < ApplicationController
     # before_action :require_login
 
     def index
+      if params[:location_id]
+        @shares = Location.find(params[:location_id]).shares
+      else
         @shares = Share.all
     end
+  end 
   
     def show
         @share = Share.find(params[:id])
@@ -12,9 +16,7 @@ class SharesController < ApplicationController
   
     def new
         @share = Share.new
-
        end
-  
   
        def create
        @share = Share.new(share_params)
@@ -24,7 +26,6 @@ class SharesController < ApplicationController
           render :new
        end 
         end
-  
   
     def edit
       @share = Share.find_by(id: params[:share_id])
