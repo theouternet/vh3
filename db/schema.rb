@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 2020_05_08_221457) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "omniauth_uid"
+    t.string "omniauth_provider"
     t.string "username"
     t.string "password_digest"
     t.datetime "created_at", null: false
