@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :shares 
 
   with_options if: :omniauth_uid_blank? do |u|
-    u.validates :username, :name, :post_nominals, presence: true
+    u.validates :username, presence: true
     u.validates :username, format: {
       with: /\w{4,}/,
       message: "must contain 4+ characters; only letters, numbers, and underscores are allowed"}
@@ -21,13 +21,7 @@ class User < ActiveRecord::Base
       .detect {|u| u.username == self.username}
   end
 
-  def display_name
-    if self.post_nominals
-      self.name + ', ' + self.post_nominals
-    else
-      self.name
-    end
-  end
+
 
 
 end
