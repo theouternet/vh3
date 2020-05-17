@@ -2,10 +2,10 @@
 
 - RUN 'RAILS SERVER' TO TEST IN BROWSER
 
-- omniauth
-- validations
+- no existing user login error
+- log out function
+- navigation
 - You must include at least one class level ActiveRecord scope method. a. Your scope method must be chainable, meaning that you must use ActiveRecord Query methods within it (such as .where and .order) rather than native ruby methods (such as #find_all or #sort).
-- passwords
 - Your forms should correctly display validation errors.
 
     a. Your fields should be enclosed within a fields_with_errors class

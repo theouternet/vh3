@@ -6,6 +6,9 @@ class Share < ActiveRecord::Base
 
  validates :drink, :location, presence: true
 
+ scope :created_after, ->(time) { where("created_at >= ?", time) }
+
+
 
  def location_name=(name)
     self.location = Location.find_or_create_by(name: name)
