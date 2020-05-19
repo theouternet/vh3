@@ -1,3 +1,14 @@
+<% if @share.errors.any? %>
+  <div class="notice alert-warning">
+      <p>There were some errors:</p>
+      <br>
+        <% @rating.errors.full_messages.each do |message| %>
+          <p><%= message %></p>
+        <% end %>
+    </div>
+<% end %>
+
+
 <%= form_for @share do |f| %>
 
   <%= f.label "Bar" %>
@@ -22,3 +33,4 @@
 <%= f.submit %>
 
 <% end %>
+

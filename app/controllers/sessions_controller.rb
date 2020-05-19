@@ -10,18 +10,21 @@ class SessionsController < ApplicationController
             u.username = auth['info']['name']
             u.omniauth_provider = auth['provider']
             u.password = u.password_confirmation = SecureRandom.urlsafe_base64(n=6)
-          end
-        else
-          @user = User.find_by(username: params[:user][:username])
-          unless @user.authenticate(params[:user][:password])
-            flash.alert = "Incorrect username and/or password"
-            redirect_to login_path
-            return
-          end
+          end 
+          else
+            @user = User.find_by(username: params[:user][:username])
+
+            if @user && @user.authenticate(params[:user][:password])
+              log_in(@user)
+      
+              redirect_to user_path(@user)              
+          session[:user_id] = @user.id
+          redirect_to root_path
         end
-        session[:user_id] = @user.id
-        redirect_to root_path
       end
+    end 
+
+
 
 def destroy
     session.delete :user_id

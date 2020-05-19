@@ -15,7 +15,7 @@ class SharesController < ApplicationController
     end
   
     def new
-        @share = Share.new
+        @share = Share.new(:user_id => current_user.id)
        end
   
        def create
@@ -44,7 +44,7 @@ class SharesController < ApplicationController
   private
   
     def share_params
-      params.require(:share).permit(:size, :price, :when_available, :zip, :menu_link, :location_name, :drink_name)
+      params.require(:share).permit(:size, :price, :when_available, :zip, :menu_link, :location_name, :drink_name, :user_id)
     end
   
 

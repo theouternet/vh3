@@ -2,15 +2,13 @@
 
 - RUN 'RAILS SERVER' TO TEST IN BROWSER
 
-- no existing user login error
 - log out function
 - navigation
-- You must include at least one class level ActiveRecord scope method. a. Your scope method must be chainable, meaning that you must use ActiveRecord Query methods within it (such as .where and .order) rather than native ruby methods (such as #find_all or #sort).
-- Your forms should correctly display validation errors.
+          <td><%= (link_to 'edit', edit_patient_prescription_path(@patient, p), class: "edit_link") if my_patient?(@patient) %>
+          
+<%= (link_to 'add new prescription', new_patient_prescription_path(@patient), class: "edit_link") if @patient.user == current_user %>
 
-    a. Your fields should be enclosed within a fields_with_errors class
 
-    b. Error messages describing the validation failures must be present within the view.
 
 -----
 
