@@ -4,27 +4,19 @@ ValueHourr is a Rails app that lets you share & view drink prices & specials at 
 
 Log in using traditional email accounts or via your Google account to start contributing or viewing instantly.
 
------
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Installation
 
-Things you may want to cover:
+Clone and bundle this repository, start 'rails server', and view the app in your browser
 
-* Ruby version
+Usage
 
-* System dependencies
+Create an account to contribute, or browse the contributions of others freely and anonymously.
 
-* Configuration
+Contributing
 
-* Database creation
+Bug reports and pull requests can be contributed via GitHub. 
 
-* Database initialization
+License
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This app is available as open source under the terms of the MIT License.
