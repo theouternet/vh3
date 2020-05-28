@@ -1,14 +1,8 @@
 # README
 
-- RUN 'RAILS SERVER' TO TEST IN BROWSER
+ValueHourr is a Rails app that lets you share & view drink prices & specials at your favorite bars in your area. 
 
-- log out function
-- navigation
-          <td><%= (link_to 'edit', edit_patient_prescription_path(@patient, p), class: "edit_link") if my_patient?(@patient) %>
-          
-<%= (link_to 'add new prescription', new_patient_prescription_path(@patient), class: "edit_link") if @patient.user == current_user %>
-
-
+Log in using traditional email accounts or via your Google account to start contributing or viewing instantly.
 
 -----
 
